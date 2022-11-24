@@ -6,7 +6,9 @@ let regexp = /(".*\\".*?")|('.*\\'.*?')|('.*?')|(".*?")/g;
 SHR.onload = () => {
   str = SHR.response;
   let result = str.match(regexp);
-  console.log(result);
+  for (let i = 0; i < result.length; i++) {
+    console.log(result[i]);
+  }
 };
 
 SHR.send();
